@@ -1,4 +1,4 @@
 Coffee 3
 Bread 2
 Tea 2
-TODO price for juice
+Juice 4
