@@ -1,8 +1,13 @@
 name: Checks
-on: push
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
       - run: sh check.sh
+      - run: echo "$GITHUB_EVENT_NAME $GITHUB_REF"
+      - run: git log --oneline
